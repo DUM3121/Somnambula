@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sleep Research Assessment — Hartmann Institute</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">
+        HARTMANN<br>
+        <span>INSTITUTE</span>
+    </div>
+
+    <nav>
+        <a href="index.html">ABOUT</a>
+        <a href="#">RESEARCH</a>
+        <a href="#">PUBLICATIONS</a>
+        <a href="archive.html">ARCHIVE</a>
+        <a href="#">CONTACT</a>
+    </nav>
+
+</header>
+
+
+<main>
+
+<section class="content">
+
+    <p class="section-number">
+        HARTMANN INSTITUTE — RESEARCH DIVISION
+    </p>
+
+    <h2>SLEEP RESEARCH ASSESSMENT</h2>
+
+    <p>
+        This assessment is used by the Hartmann Institute
+        to collect information concerning sleep patterns,
+        dreams and auditory perception.
+    </p>
+
+    <p>
+        Please answer each question honestly.
+    </p>
+
+    <hr>
+
+
+    <!-- QUESTION 1 -->
+
+    <div id="question1">
+
+        <h3>QUESTION 01</h3>
+
+        <p>
+            Have you ever heard a sound in your dreams
+            that you could not identify?
+        </p>
+
+        <button onclick="questionTwo()">YES</button>
+        <button onclick="questionTwo()">NO</button>
+
+    </div>
+
+
+    <!-- QUESTION 2 -->
+
+    <div id="question2" style="display:none;">
+
+        <hr>
+
+        <h3>QUESTION 02</h3>
+
+        <p>
+            Have you ever seen someone in a dream
+            who looked exactly like you?
+        </p>
+
+        <button onclick="questionThree()">YES</button>
+        <button onclick="questionThree()">NO</button>
+
+    </div>
+
+
+    <!-- QUESTION 3 -->
+
+    <div id="question3" style="display:none;">
+
+        <hr>
+
+        <h3>QUESTION 03</h3>
+
+        <p>
+            Have you ever heard someone call your name
+            while you were asleep?
+        </p>
+
+        <button onclick="finishTest()">YES</button>
+        <button onclick="finishTest()">NO</button>
+
+    </div>
+
+
+    <!-- RESULT -->
+
+    <div id="result" style="display:none;">
+
+        <hr>
+
+        <h3>SESSION COMPLETE</h3>
+
+        <p>
+            Thank you. Your responses have been recorded.
+        </p>
+
+        <p>
+            Processing assessment...
+        </p>
+
+        <p id="processing">
+            PLEASE WAIT.
+        </p>
+
+    </div>
+
+
+    <!-- HIDDEN RESULT -->
+
+    <div id="match" style="display:none;">
+
+        <hr>
+
+        <h3>DREAM RESPONSE MATCHED</h3>
+
+        <p>
+            An existing record matching your responses
+            has been found in the Hartmann Institute archive.
+        </p>
+
+        <p>
+            <strong>PATIENT FILE:</strong>
+            KELLY, LIAM
+        </p>
+
+        <p>
+            <strong>STATUS:</strong>
+            DECEASED
+        </p>
+
+        <br>
+
+        <p>
+            <a href="patient-kelly.html">
+                ACCESS PATIENT FILE →
+            </a>
+        </p>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<footer>
+
+    <div>
+        HARTMANN INSTITUTE
+    </div>
+
+    <div>
+        © 1986 Hartmann Institute
+    </div>
+
+</footer>
+
+
+<script>
+
+function questionTwo() {
+
+    document.getElementById("question1").style.display = "none";
+
+    document.getElementById("question2").style.display = "block";
+}
+
+
+function questionThree() {
+
+    document.getElementById("question2").style.display = "none";
+
+    document.getElementById("question3").style.display = "block";
+}
+
+
+function finishTest() {
+
+    document.getElementById("question3").style.display = "none";
+
+    document.getElementById("result").style.display = "block";
+
+    setTimeout(function() {
+
+        document.getElementById("processing").innerHTML =
+            "MATCH FOUND.";
+
+        setTimeout(function() {
+
+            document.getElementById("match").style.display = "block";
+
+        }, 1500);
+
+    }, 1500);
+
+}
+
+</script>
+
+</body>
+</html>

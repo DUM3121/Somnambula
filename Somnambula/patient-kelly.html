@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Restricted Access — Hartmann Institute</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">
+        HARTMANN<br>
+        <span>INSTITUTE</span>
+    </div>
+
+    <nav>
+        <a href="index.html">ABOUT</a>
+        <a href="#">RESEARCH</a>
+        <a href="#">PUBLICATIONS</a>
+        <a href="archive.html">ARCHIVE</a>
+        <a href="#">CONTACT</a>
+    </nav>
+
+</header>
+
+
+<main>
+
+<section class="content">
+
+    <!-- LOGIN -->
+
+    <div id="login">
+
+        <p class="section-number">
+            HARTMANN INSTITUTE — RESTRICTED
+        </p>
+
+        <h2>RESTRICTED ACCESS</h2>
+
+        <hr>
+
+        <p>
+            PATIENT FILE: KELLY, LIAM
+        </p>
+
+        <p>
+            This file requires authorization.
+        </p>
+
+        <br>
+
+        <label for="password">
+            AUTHORIZATION CODE
+        </label>
+
+        <br><br>
+
+        <input
+            type="password"
+            id="password"
+            placeholder="ENTER CODE"
+        >
+
+        <button onclick="checkPassword()">
+            ACCESS
+        </button>
+
+        <p id="error"></p>
+
+    </div>
+
+
+    <!-- PATIENT FILE -->
+
+    <div id="patientFile" style="display:none;">
+
+        <p class="section-number">
+            HARTMANN INSTITUTE — RESTRICTED
+        </p>
+
+        <h2>PATIENT FILE</h2>
+
+        <hr>
+
+        <p>
+            <strong>NAME:</strong> Liam Kelly
+        </p>
+
+        <p>
+            <strong>AGE:</strong> 23
+        </p>
+
+        <p>
+            <strong>ADDRESS:</strong> 8th Street
+        </p>
+
+        <p>
+            <strong>ADMISSION:</strong> 09 DEC 1986
+        </p>
+
+        <p>
+            <strong>STATUS:</strong> DECEASED
+        </p>
+
+        <br>
+
+        <h3>INITIAL OBSERVATION</h3>
+
+        <p>
+            Patient reported recurring nightmares prior to
+            participation in the Hartmann Institute study.
+        </p>
+
+        <p>
+            Patient described the dreams as unusually vivid
+            and persistent.
+        </p>
+
+        <br>
+
+        <h3>SLEEP STUDY</h3>
+
+        <p>
+            Multiple sleep disturbances were recorded during
+            the observation period.
+        </p>
+
+        <p>
+            Patient repeatedly reported the sensation that
+            someone was present inside the room.
+        </p>
+
+        <p>
+            No additional individual was detected by staff.
+        </p>
+
+        <br>
+
+        <h3>FINAL OBSERVATION</h3>
+
+        <p>
+            03:14 AM — Subject entered REM sleep.
+        </p>
+
+        <p>
+            03:15 AM — Recording interrupted.
+        </p>
+
+        <p>
+            03:17 AM — <strong>[DATA REMOVED]</strong>
+        </p>
+
+        <br>
+
+        <h3>CAUSE OF DEATH</h3>
+
+        <p>
+            <strong>[CLASSIFIED]</strong>
+        </p>
+
+        <br>
+
+        <hr>
+
+        <br>
+
+        <p class="archive-status">
+            THIS FILE HAS BEEN MODIFIED AFTER ARCHIVAL.
+        </p>
+
+        <p class="archive-status">
+            LAST MODIFICATION: UNKNOWN
+        </p>
+
+        <br>
+
+        <a href="film-7a.html">
+            ← RETURN TO FILM 7-A
+        </a>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<footer>
+
+    <div>
+        HARTMANN INSTITUTE
+    </div>
+
+    <div>
+        © 1986 Hartmann Institute
+    </div>
+
+</footer>
+
+
+<script>
+
+function checkPassword() {
+
+    const password =
+        document.getElementById("password").value;
+
+    if (password === "9856") {
+
+        document.getElementById("login").style.display = "none";
+
+        document.getElementById("patientFile").style.display = "block";
+
+    } else {
+
+        document.getElementById("error").innerHTML =
+            "ACCESS DENIED.";
+
+    }
+
+}
+
+</script>
+
+</body>
+</html>

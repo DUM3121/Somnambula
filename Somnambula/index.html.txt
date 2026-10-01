@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hartmann Institute</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>HARTMANN INSTITUTE</h1>
+    <p>Researching the boundaries of human consciousness.</p>
+</header>
+
+<nav>
+    <a href="#">ABOUT</a>
+    <a href="#">RESEARCH</a>
+    <a href="archive.html">ARCHIVE</a>
+    <a href="#">CONTACT</a>
+</nav>
+
+<section>
+    <h2>ABOUT THE INSTITUTE</h2>
+
+    <p>
+        The Hartmann Institute is an independent research organization
+        dedicated to the study of human consciousness, sleep and
+        neurological phenomena.
+    </p>
+
+    <p>
+        Founded in 1978, the Institute continues to investigate
+        the relationship between sleep, memory and human perception.
+    </p>
+</section>
+
+<section>
+    <h2>CURRENT RESEARCH</h2>
+
+    <p>
+        Our current research focuses on sleep-related auditory phenomena,
+        dream perception and memory reconstruction.
+    </p>
+</section>
+
+<footer>
+    Hartmann Institute — Research Division
+</footer>
+
+</body>
+</html>
